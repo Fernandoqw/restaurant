@@ -191,7 +191,7 @@ checkoutBtn.addEventListener("click", function(){
     const totalPagamento = cartTotal.textContent
     const paymentMethod = selectedPayment.value;
     const message = encodeURIComponent(cartItems)
-    const phone = "11941203698"
+    const phone = "5511941203698"
 
     window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value} | Total: ${totalPagamento} Pagamento: ${paymentMethod} |`, "_blank");
 
