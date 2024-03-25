@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/output.css" />
+    <title>Dev - Restaurante</title>
+  </head>
+
+  <body>
+
+    <header class="w-full h-[428px] bg-zinc-900 bg-home bg-cover bg-center">
+      <div class="w-full h-full flex flex-col justify-center items-center">
+        <img
+          src="./assets/prato1.jpg"
+          alt="LogoDev"
+          class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
+        />
+        <h1 class="text-3xl text-white mt-4 mb-2 font-bold">Dev Restaurant</h1>
+
+        <span class="text-white font-medium">Avenida ABC, 123</span>
+
+        <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="data-span">
+          <span class="text-white font-medium">Seg a Dom - 17:00 as 23:00</span>
+        </div>
+      </div>
+    </header>
+
+
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">Menu</h2>
+
+   
+    <div id="menu">
+      <main
+        class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16"
+      >
+        <div class="flex gap-2">
+          <img
+            src="assets/prato1.jpg"
+            alt="Hamburguer Smash"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+          />
+
+          <div>
+            <p class="font-bold">Feijoada</p>
+            <p class="text-sm">
+              A feijoada à brasileira é um prato de feijões-pretos com vários tipos de carne de porco e de boi. É servida com arroz branco, couve refogada e laranja fatiada, entre outros acompanhamentos.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 35</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Feijoada"
+                data-price="35"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <img
+            src="assets/prato2.jpg"
+            alt="Peixe Frito"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+          />
+
+          <div>
+            <p class="font-bold">Peixe Frito</p>
+            <p class="text-sm">
+              Peixe frito consiste na fritura de qualquer tipo de peixe, com óleo ou azeite extra virgem, vem acompanhada de fritas e, diversas opções de molho e limão.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 32.90</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Peixe Frito"
+                data-price="32.90"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <img
+            src="assets/prato3.jpg"
+            alt="Vegetariano"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+          />
+
+          <div>
+            <p class="font-bold">Vegetariano</p>
+            <p class="text-sm">
+              Um festival de sabores vegetais frescos: brócolis crocante, cogumelos suculentos e pimentões vibrantes, servidos sobre uma cama de quinoa ou arroz integral. Uma refeição vegetariana nutritiva e deliciosa.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 40</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Vegetariano"
+                data-price="40"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <img
+            src="assets/prato4.jpg"
+            alt="Prato da Casa"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+          />
+
+          <div>
+            <p class="font-bold">Prato da Casa</p>
+            <p class="text-sm">
+              Experimente nosso prato da casa: carne grelhada e legumes frescos. Uma combinação irresistível de sabores e texturas para os paladares mais exigentes.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 50</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Prato da Casa"
+                data-price="50"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="mx-auto max-w-7xl px-2 my-2">
+        <h2 class="font-bold text-3xl">Bebidas</h2>
+      </div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16"
+        id="menu"
+      >
+        <div class="flex gap-2 w-full">
+          <img
+            src="assets/bebida1.jpg"
+            alt="Drink"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+          />
+
+          <div class="w-full">
+            <p class="font-bold">Drinks</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 10</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Drinks"
+                data-price="10"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-2 w-full">
+          <img
+            src="assets/bebida2.jpg"
+            alt="Caipirinha"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+          />
+
+          <div class="w-full">
+            <p class="font-bold">Caipirinha</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 10</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Caipirinha"
+                data-price="10"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    <div
+      class="bg-black/60 w-full h-full fixed top-0 z-[99] items-center justify-center hidden"
+      id="cart-modal"
+    >
+
+      <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+        <h2 class="text-center font-bold text-2xl mb-2">Carrinho</h2>
+
+        <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+
+        <p class="font-bold flex justify-center mb-2">
+          Total:
+          <span id="cart-total">0.00 </span>
+        </p>
+
+        <p class="font-bold">Endereço de Entrega:</p>
+        <input
+          type="text"
+          placeholder="Digite seu endereço completo"
+          id="address"
+          class="w-full border-2 p-1 rounded my-1"
+        />
+        <p class="text-red-500 hidden" id="address-warn">
+          Digite seu endereço completo
+        </p>
+        
+        <p class="font-bold mt-2">Forma de Pagamento:</p>
+        <div class="my-1">
+          <input type="radio" name="payId" id="isPix" value="Pix"><label for="isPix" class="mr-4"> Pix</label>
+          <input type="radio" name="payId" id="isCartao" value="Cartão"><label for="isCartao" class="mr-4"> Cartão</label>
+          <input type="radio" name="payId" id="isDinheiro" value="Dinheiro"><label for="isDinheiro"> Dinheiro</label>
+          <p class="text-red-500 hidden" id="pay-warn">
+            Selecione uma forma de Pagamento
+          </p>
+        </div>
+
+        <div class="flex items-center justify-between mt-5 w-full">
+          <button id="close-modal-btn">Fechar</button>
+          <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">
+            Enviar pedido
+          </button>
+        </div>
+      </div>
+    </div>
+  
+    <footer
+      class="w-full bg-black py-3 fixed bottom-0 z-40 flex items-center justify-center"
+    >
+      <button
+        class="flex items-center gap-2 text-white font-bold"
+        id="cart-btn"
+      >
+        (<span id="cart-count">0</span>) Carrinho
+        <i class="fa fa-cart-plus text-lg text-white"></i>
+      </button>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
